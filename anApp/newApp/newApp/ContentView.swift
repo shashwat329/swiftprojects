@@ -14,8 +14,8 @@ struct DashboardView: View {
         VStack {
             if let dashboardData = viewModel.dashboardData {
                 // Display your dashboard data
-//                Text("Some Property: \(dashboardData.someProperty)")
-//                Text("Another Property: \(dashboardData.anotherProperty)")
+                Text("status: \(dashboardData.status)")
+                Text("Another Property: \(dashboardData.statusCode)")
             } else if let errorMessage = viewModel.errorMessage {
                 Text("Error: \(errorMessage)")
             } else {
@@ -28,8 +28,10 @@ struct DashboardView: View {
     }
 }
 
+
 struct ContentView: View {
     var body: some View {
+        DashboardView()
         VStack {
             Rectangle()
                 .fill(Color.blue)
@@ -52,7 +54,7 @@ struct ContentView: View {
                             }
                         }
                 )
-                .padding(.top,-60)
+                .padding(.top,-130)
                 
         }
         Greeting()
