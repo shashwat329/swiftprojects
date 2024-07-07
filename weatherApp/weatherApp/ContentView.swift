@@ -2,20 +2,14 @@
 //  ContentView.swift
 //  weatherApp
 //
-//  Created by shashwat singh on 29/06/24.
+//  Created by shashwat singh on 07/07/24.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
