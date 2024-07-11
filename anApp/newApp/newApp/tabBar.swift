@@ -4,7 +4,6 @@
 //
 //  Created by shashwat singh on 26/05/24.
 //
-
 import SwiftUI
 
 enum Tab: String, CaseIterable {
@@ -52,3 +51,4 @@ struct TabBar: View {
 #Preview {
     TabBar()
 }
+

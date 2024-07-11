@@ -44,31 +44,32 @@ struct ContentView: View {
                     switch result {
                     case .success(let forecast):
                         for weather in forecast.weather {
-                                               print("Description: \(weather.description)")
-                                           print("Icon URL: \(weather.weatherIconURL)")
-                                           }
-                                           print("Temperature: \(forecast.main.temp)")
-                                          print("Max Temp: \(forecast.main.temp_max)")
-                                          print("Min Temp: \(forecast.main.temp_min)")
-                                           print("Pressure: \(forecast.main.pressure)")
-                                          print("Humidity: \(forecast.main.humidity)")
-                                           print("Visibility: \(forecast.visibility)")
-                                          print("Wind Speed: \(forecast.wind.speed)")
-                                           print("Country: \(forecast.sys.country)")
-                                          print("Sunrise: \(forecast.sys.sunrise)")
-                                           print("Sunset: \(forecast.sys.sunset)")
-                    case .failure(let apiError):
-                        switch apiError {
-                        case .error(let errorString):
-                            print(errorString)
+                            print("Description: \(weather.description)")
+                            //                                           print("Icon URL: \(weather.weatherIconURL)")
+                            //
+                        }
+                            print("Temperature: \(forecast.main.temp)")
+                            print("Max Temp: \(forecast.main.max_temp)")
+                            print("Min Temp: \(forecast.main.min_temp)")
+                            print("Pressure: \(forecast.main.pressure)")
+                            print("Humidity: \(forecast.main.humidity)")
+                            print("Visibility: \(forecast.visibility)")
+                            print("Wind Speed: \(forecast.wind.speed)")
+                            print("Country: \(forecast.sys.country)")
+                            print("Sunrise: \(forecast.sys.sunrise)")
+                            print("Sunset: \(forecast.sys.sunset)")
+                        case failure(apiError):
+                            switch apiError {
+                            case .error(let errorString):
+                                print(errorString)
+                            }
                         }
                     }
                 }
             }
         }
     }
-}
+    #Preview {
+        ContentView()
+    }
 
-#Preview {
-    ContentView()
-}
