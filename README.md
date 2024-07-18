@@ -10,7 +10,7 @@ This Swiftproject repo is also includes swiftUI [SwiftUI Bootcamp](https://www.y
 
 |     UIkit projects    |   SwiftUI projects   |
 | ----------------------|--------------------- |
-|   - [x]StormViewer    | - []WeatherApp      |
+|   -[x]StormViewer    | - []WeatherApp      |
 |  - []Guess the flag  | - []Signup_login    |
  
 
