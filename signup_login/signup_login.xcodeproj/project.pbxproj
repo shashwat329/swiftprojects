@@ -14,6 +14,7 @@
 		6B457B322C491F2C00899CF6 /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B457B312C491F2C00899CF6 /* Start.swift */; };
 		6B457B352C49284500899CF6 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B457B342C49284500899CF6 /* Color.swift */; };
 		6B457B392C4930CA00899CF6 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B457B382C4930CA00899CF6 /* login.swift */; };
+		6BB602B02C4B36BD00544C57 /* OTPlogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB602AF2C4B36BD00544C57 /* OTPlogin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		6B457B312C491F2C00899CF6 /* Start.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
 		6B457B342C49284500899CF6 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		6B457B382C4930CA00899CF6 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
+		6BB602AF2C4B36BD00544C57 /* OTPlogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPlogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 		6B457B172C48CFF100899CF6 = {
 			isa = PBXGroup;
 			children = (
+				6BB602AF2C4B36BD00544C57 /* OTPlogin.swift */,
 				6B457B222C48CFF100899CF6 /* signup_login */,
 				6B457B212C48CFF100899CF6 /* Products */,
 			);
@@ -149,6 +152,7 @@
 				6B457B262C48CFF100899CF6 /* ContentView.swift in Sources */,
 				6B457B392C4930CA00899CF6 /* login.swift in Sources */,
 				6B457B352C49284500899CF6 /* Color.swift in Sources */,
+				6BB602B02C4B36BD00544C57 /* OTPlogin.swift in Sources */,
 				6B457B322C491F2C00899CF6 /* Start.swift in Sources */,
 				6B457B242C48CFF100899CF6 /* signup_loginApp.swift in Sources */,
 			);
