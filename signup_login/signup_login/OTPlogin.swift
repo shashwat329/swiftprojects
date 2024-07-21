@@ -50,42 +50,47 @@ struct OTPlogin: View {
       @State private var phoneNumber: String = ""
 
       var body: some View {
-          VStack(spacing: 20) {
-              if !viewModel.isOTPSent {
-                  TextField("Enter Phone Number", text: $viewModel.phoneNumber)
-                      .keyboardType(.phonePad)
+          ZStack{
+              //background
+//              Color.black.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+              //content
+              VStack(spacing: 20) {
+                  if !viewModel.isOTPSent {
+                      TextField("Enter Phone Number", text: $viewModel.phoneNumber)
+                          .keyboardType(.phonePad)
+                          .padding()
+                          .background(Color.gray.opacity(0.2))
+                          .cornerRadius(8)
+                      
+                      Button(action: {
+                          viewModel.sendOTP()
+                      }) {
+                          Text("Send OTP")
+                              .foregroundColor(.white)
+                              .padding()
+                              .background(Color.blue)
+                              .cornerRadius(8)
+                      }
+                  } else {
+                      OTPInputView(otp: $viewModel.otp)
+                      
+                      Button(action: {
+                          viewModel.verifyOTP()
+                      }) {
+                          Text("Verify OTP")
+                              .foregroundColor(.white)
+                              .padding()
+                              .background(Color.blue)
+                              .cornerRadius(8)
+                      }
+                  }
+                  
+                  Text(viewModel.message)
+                      .foregroundColor(.green)
                       .padding()
-                      .background(Color.gray.opacity(0.2))
-                      .cornerRadius(8)
-                  
-                  Button(action: {
-                      viewModel.sendOTP()
-                  }) {
-                      Text("Send OTP")
-                          .foregroundColor(.white)
-                          .padding()
-                          .background(Color.blue)
-                          .cornerRadius(8)
-                  }
-              } else {
-                  OTPInputView(otp: $viewModel.otp)
-                  
-                  Button(action: {
-                      viewModel.verifyOTP()
-                  }) {
-                      Text("Verify OTP")
-                          .foregroundColor(.white)
-                          .padding()
-                          .background(Color.blue)
-                          .cornerRadius(8)
-                  }
               }
-              
-              Text(viewModel.message)
-                  .foregroundColor(.green)
-                  .padding()
+              .padding()
           }
-          .padding()
       }
   }
 
