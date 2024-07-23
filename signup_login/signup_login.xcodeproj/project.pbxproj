@@ -43,7 +43,6 @@
 		6B457B172C48CFF100899CF6 = {
 			isa = PBXGroup;
 			children = (
-				6BB602AF2C4B36BD00544C57 /* OTPlogin.swift */,
 				6B457B222C48CFF100899CF6 /* signup_login */,
 				6B457B212C48CFF100899CF6 /* Products */,
 			);
@@ -62,11 +61,12 @@
 			children = (
 				6B457B232C48CFF100899CF6 /* signup_loginApp.swift */,
 				6B457B252C48CFF100899CF6 /* ContentView.swift */,
+				6B457B382C4930CA00899CF6 /* login.swift */,
+				6BB602AF2C4B36BD00544C57 /* OTPlogin.swift */,
 				6B457B272C48CFF200899CF6 /* Assets.xcassets */,
 				6B457B292C48CFF200899CF6 /* Preview Content */,
 				6B457B312C491F2C00899CF6 /* Start.swift */,
 				6B457B342C49284500899CF6 /* Color.swift */,
-				6B457B382C4930CA00899CF6 /* login.swift */,
 			);
 			path = signup_login;
 			sourceTree = "<group>";

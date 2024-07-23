@@ -7,11 +7,13 @@
 
 import SwiftUI
 
+
 @main
 struct signup_loginApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                
         }
     }
 }
