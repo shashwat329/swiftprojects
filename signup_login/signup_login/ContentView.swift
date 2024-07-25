@@ -12,7 +12,6 @@ class DarkmodeSettings: ObservableObject{
     @Published var darkmode : Bool = false
 }
 struct ContentView: View {
-//    @State var darkmode : Bool = false
     @StateObject private var settings = DarkmodeSettings()
     @State var nextpage: Bool = false
     var body: some View {
@@ -47,7 +46,7 @@ struct ContentView: View {
                             .bold()
                             .foregroundColor(.orange)
                         Spacer()
-                        NavigationLink(destination: login()){
+                        NavigationLink(destination: login().environmentObject(settings)){
                             RoundedRectangle(cornerRadius: 20)
                                 .fill(Color(hex: "#1A3636"))
                                 .frame(width: 297,height: 55)

@@ -19,7 +19,6 @@ class OTPViewModel: ObservableObject {
     }
     @Published var isOTPSent: Bool = false
     @Published var message: String = ""
-
     private var cancellables = Set<AnyCancellable>()
 
     func sendOTP() {
@@ -48,30 +47,44 @@ class OTPViewModel: ObservableObject {
 struct OTPlogin: View {
     @StateObject private var viewModel = OTPViewModel()
       @State private var phoneNumber: String = ""
-
+    @EnvironmentObject var settings: DarkmodeSettings
       var body: some View {
           ZStack{
               //background
-//              Color.black.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+              Color(settings.darkmode ? .black: .gray.opacity(0.03))
+                  .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
               //content
               VStack(spacing: 20) {
                   if !viewModel.isOTPSent {
-                      TextField("Enter Phone Number", text: $viewModel.phoneNumber)
-                          .keyboardType(.phonePad)
-                          .padding()
-                          .background(Color.gray.opacity(0.2))
-                          .cornerRadius(8)
-                      
-                      Button(action: {
-                          viewModel.sendOTP()
-                      }) {
-                          Text("Send OTP")
-                              .foregroundColor(.white)
-                              .padding()
-                              .background(Color.blue)
-                              .cornerRadius(8)
+                      ZStack(alignment: .leading){
+                          if phoneNumber.isEmpty{
+                              Text("Enter your number")
+                          }
+                          
+                          TextField("", text: $viewModel.phoneNumber)
+                             
                       }
-                  } else {
+                      .keyboardType(.phonePad)
+                      
+                      .frame(height: 45)
+                      .padding(.horizontal)
+                      .background(settings.darkmode ? .gray : .secondary.opacity(0.2))
+                      .cornerRadius(8)
+                      .overlay{
+                          RoundedRectangle(cornerRadius: 8)
+                              .stroke(Color(.systemGray6),lineWidth: 2)
+                      }
+                          Button(action: {
+                              viewModel.sendOTP()
+                          }) {
+                              Text("Send OTP")
+                                  .foregroundColor(.white)
+                                  .padding()
+                                  .background(Color(hex: "#1A3636"))
+                                  .cornerRadius(8)
+                          }
+                  }
+                  else {
                       OTPInputView(otp: $viewModel.otp)
                       
                       Button(action: {
@@ -80,7 +93,7 @@ struct OTPlogin: View {
                           Text("Verify OTP")
                               .foregroundColor(.white)
                               .padding()
-                              .background(Color.blue)
+                              .background(Color(hex: "#1A3636"))
                               .cornerRadius(8)
                       }
                   }
@@ -100,7 +113,7 @@ struct OTPInputView: View {
     @Binding var otp: String
     let numberOfFields: Int = 4
     @FocusState private var focusedField: Int?
-
+    @EnvironmentObject var settings : DarkmodeSettings
     var body: some View {
         HStack(spacing: 10) {
             ForEach(0..<numberOfFields, id: \.self) { index in
@@ -130,7 +143,7 @@ struct OTPInputView: View {
                 .keyboardType(.numberPad)
                 .multilineTextAlignment(.center)
                 .frame(width: 40, height: 40)
-                .background(Color.gray.opacity(0.2))
+                .background(settings.darkmode ? .white.opacity(0.2): .gray.opacity(0.1))
                 .cornerRadius(8)
                 .focused($focusedField, equals: index)
             }
@@ -145,4 +158,5 @@ struct OTPInputView: View {
                     
 #Preview {
     OTPlogin()
+        .environmentObject(DarkmodeSettings())
 }
