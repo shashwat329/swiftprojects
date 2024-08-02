@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 class DarkmodeSettings: ObservableObject{
-    @Published var darkmode : Bool = false
+    @Published var darkmode : Bool = true
 }
 struct ContentView: View {
     @StateObject private var settings = DarkmodeSettings()
