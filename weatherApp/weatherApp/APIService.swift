@@ -1,3 +1,5 @@
+//this is created to retrive and decode data from the api and to create a instance of our forecast struct
+
 import Foundation
 class APIService{
     public static let shared = APIService()

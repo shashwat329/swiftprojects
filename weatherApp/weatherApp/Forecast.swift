@@ -37,3 +37,22 @@ struct Forecast: Codable{
     }
     let sys: [Sys]
 }
+//
+func fetchData(){
+    let apiService = APIService.shared
+    apiService.getJSON(urlString: "https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=3b8d99bf986a068f027aca0f1ea94cc5") {(result: Result<Forecast,APIService.APIError>) in
+        switch result{
+        case .success(let forecast ):
+            for day in forecast.weather {
+                print(day.description)
+            }
+        case .failure(let apiError):
+            switch apiError {
+            case .error(let errorString):
+                print(errorString)
+            }
+        }
+    }
+}
+
+

@@ -56,10 +56,10 @@
 			isa = PBXGroup;
 			children = (
 				6BF90D0E2C3FCBA30061C4D7 /* gpayApp.swift */,
+				6BF90D1C2C3FCBC70061C4D7 /* g3.swift */,
 				6BF90D102C3FCBA30061C4D7 /* ContentView.swift */,
 				6BF90D122C3FCBA30061C4D7 /* Assets.xcassets */,
 				6BF90D142C3FCBA30061C4D7 /* Preview Content */,
-				6BF90D1C2C3FCBC70061C4D7 /* g3.swift */,
 				6BF90D1E2C3FE96B0061C4D7 /* g2.swift */,
 			);
 			path = gpay;
