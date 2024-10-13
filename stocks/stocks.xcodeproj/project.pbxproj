@@ -45,6 +45,11 @@
 			path = stocksUITests;
 			sourceTree = "<group>";
 		};
+		6B390FE42CAF09660040C6F8 /* Views */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +80,7 @@
 		6B390FA62CAF07CF0040C6F8 = {
 			isa = PBXGroup;
 			children = (
+				6B390FE42CAF09660040C6F8 /* Views */,
 				6B390FB12CAF07CF0040C6F8 /* stocks */,
 				6B390FC22CAF07D00040C6F8 /* stocksTests */,
 				6B390FCC2CAF07D00040C6F8 /* stocksUITests */,
@@ -109,6 +115,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				6B390FB12CAF07CF0040C6F8 /* stocks */,
+				6B390FE42CAF09660040C6F8 /* Views */,
 			);
 			name = stocks;
 			packageProductDependencies = (
