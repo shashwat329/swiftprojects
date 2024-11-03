@@ -27,6 +27,7 @@ struct g3: View {
                         Circle()
                             .stroke(lineWidth: 5)
                             .frame(width:120)
+                            .foregroundStyle(.black)
                     }
                 Spacer()
                 HStack(spacing: -2){
@@ -74,7 +75,7 @@ struct g3: View {
             .padding(.vertical)
                 VStack(spacing: -10, content: {
                     Text("Powered by".capitalized)
-                            .colorInvert()
+//                            .colorInvert()
                             .font(.caption)
                             .italic()
                         Image("upi")

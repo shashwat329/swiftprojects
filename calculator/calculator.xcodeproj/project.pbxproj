@@ -3,34 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		6BF90D0F2C3FCBA30061C4D7 /* gpayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF90D0E2C3FCBA30061C4D7 /* gpayApp.swift */; };
-		6BF90D112C3FCBA30061C4D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF90D102C3FCBA30061C4D7 /* ContentView.swift */; };
-		6BF90D132C3FCBA30061C4D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BF90D122C3FCBA30061C4D7 /* Assets.xcassets */; };
-		6BF90D162C3FCBA30061C4D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BF90D152C3FCBA30061C4D7 /* Preview Assets.xcassets */; };
-		6BF90D1D2C3FCBC70061C4D7 /* g3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF90D1C2C3FCBC70061C4D7 /* g3.swift */; };
-		6BF90D1F2C3FE96B0061C4D7 /* g2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF90D1E2C3FE96B0061C4D7 /* g2.swift */; };
-		6BFC27982CD71FB80055EFA8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFC27972CD71FB80055EFA8 /* HomeView.swift */; };
-		6BFC279C2CD79E5D0055EFA8 /* QRscanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFC279B2CD79E5D0055EFA8 /* QRscanner.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
-		6BF90D0B2C3FCBA30061C4D7 /* gpay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gpay.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6BF90D0E2C3FCBA30061C4D7 /* gpayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gpayApp.swift; sourceTree = "<group>"; };
-		6BF90D102C3FCBA30061C4D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		6BF90D122C3FCBA30061C4D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6BF90D152C3FCBA30061C4D7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		6BF90D1C2C3FCBC70061C4D7 /* g3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = g3.swift; sourceTree = "<group>"; };
-		6BF90D1E2C3FE96B0061C4D7 /* g2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = g2.swift; sourceTree = "<group>"; };
-		6BFC27972CD71FB80055EFA8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		6BFC279B2CD79E5D0055EFA8 /* QRscanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRscanner.swift; sourceTree = "<group>"; };
+		6B55111B2CD2EED0001FEC02 /* calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		6B55111D2CD2EED0001FEC02 /* calculator */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = calculator;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
-		6BF90D082C3FCBA30061C4D7 /* Frameworks */ = {
+		6B5511182CD2EED0001FEC02 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,136 +29,103 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6BF90D022C3FCBA30061C4D7 = {
+		6B5511122CD2EED0001FEC02 = {
 			isa = PBXGroup;
 			children = (
-				6BF90D0D2C3FCBA30061C4D7 /* gpay */,
-				6BF90D0C2C3FCBA30061C4D7 /* Products */,
+				6B55111D2CD2EED0001FEC02 /* calculator */,
+				6B55111C2CD2EED0001FEC02 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		6BF90D0C2C3FCBA30061C4D7 /* Products */ = {
+		6B55111C2CD2EED0001FEC02 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6BF90D0B2C3FCBA30061C4D7 /* gpay.app */,
+				6B55111B2CD2EED0001FEC02 /* calculator.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		6BF90D0D2C3FCBA30061C4D7 /* gpay */ = {
-			isa = PBXGroup;
-			children = (
-				6BFC27952CD6B42C0055EFA8 /* View */,
-				6BF90D0E2C3FCBA30061C4D7 /* gpayApp.swift */,
-				6BF90D122C3FCBA30061C4D7 /* Assets.xcassets */,
-				6BF90D142C3FCBA30061C4D7 /* Preview Content */,
-			);
-			path = gpay;
-			sourceTree = "<group>";
-		};
-		6BF90D142C3FCBA30061C4D7 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				6BF90D152C3FCBA30061C4D7 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		6BFC27952CD6B42C0055EFA8 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				6BF90D102C3FCBA30061C4D7 /* ContentView.swift */,
-				6BF90D1C2C3FCBC70061C4D7 /* g3.swift */,
-				6BF90D1E2C3FE96B0061C4D7 /* g2.swift */,
-				6BFC27972CD71FB80055EFA8 /* HomeView.swift */,
-				6BFC279B2CD79E5D0055EFA8 /* QRscanner.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6BF90D0A2C3FCBA30061C4D7 /* gpay */ = {
+		6B55111A2CD2EED0001FEC02 /* calculator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6BF90D192C3FCBA30061C4D7 /* Build configuration list for PBXNativeTarget "gpay" */;
+			buildConfigurationList = 6B5511292CD2EED1001FEC02 /* Build configuration list for PBXNativeTarget "calculator" */;
 			buildPhases = (
-				6BF90D072C3FCBA30061C4D7 /* Sources */,
-				6BF90D082C3FCBA30061C4D7 /* Frameworks */,
-				6BF90D092C3FCBA30061C4D7 /* Resources */,
+				6B5511172CD2EED0001FEC02 /* Sources */,
+				6B5511182CD2EED0001FEC02 /* Frameworks */,
+				6B5511192CD2EED0001FEC02 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = gpay;
-			productName = gpay;
-			productReference = 6BF90D0B2C3FCBA30061C4D7 /* gpay.app */;
+			fileSystemSynchronizedGroups = (
+				6B55111D2CD2EED0001FEC02 /* calculator */,
+			);
+			name = calculator;
+			packageProductDependencies = (
+			);
+			productName = calculator;
+			productReference = 6B55111B2CD2EED0001FEC02 /* calculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		6BF90D032C3FCBA30061C4D7 /* Project object */ = {
+		6B5511132CD2EED0001FEC02 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					6BF90D0A2C3FCBA30061C4D7 = {
-						CreatedOnToolsVersion = 15.4;
+					6B55111A2CD2EED0001FEC02 = {
+						CreatedOnToolsVersion = 16.0;
 					};
 				};
 			};
-			buildConfigurationList = 6BF90D062C3FCBA30061C4D7 /* Build configuration list for PBXProject "gpay" */;
-			compatibilityVersion = "Xcode 14.0";
+			buildConfigurationList = 6B5511162CD2EED0001FEC02 /* Build configuration list for PBXProject "calculator" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 6BF90D022C3FCBA30061C4D7;
-			productRefGroup = 6BF90D0C2C3FCBA30061C4D7 /* Products */;
+			mainGroup = 6B5511122CD2EED0001FEC02;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 6B55111C2CD2EED0001FEC02 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6BF90D0A2C3FCBA30061C4D7 /* gpay */,
+				6B55111A2CD2EED0001FEC02 /* calculator */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6BF90D092C3FCBA30061C4D7 /* Resources */ = {
+		6B5511192CD2EED0001FEC02 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BF90D162C3FCBA30061C4D7 /* Preview Assets.xcassets in Resources */,
-				6BF90D132C3FCBA30061C4D7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6BF90D072C3FCBA30061C4D7 /* Sources */ = {
+		6B5511172CD2EED0001FEC02 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BF90D1F2C3FE96B0061C4D7 /* g2.swift in Sources */,
-				6BFC279C2CD79E5D0055EFA8 /* QRscanner.swift in Sources */,
-				6BF90D112C3FCBA30061C4D7 /* ContentView.swift in Sources */,
-				6BF90D1D2C3FCBC70061C4D7 /* g3.swift in Sources */,
-				6BFC27982CD71FB80055EFA8 /* HomeView.swift in Sources */,
-				6BF90D0F2C3FCBA30061C4D7 /* gpayApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		6BF90D172C3FCBA30061C4D7 /* Debug */ = {
+		6B5511272CD2EED1001FEC02 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -221,7 +177,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -232,7 +188,7 @@
 			};
 			name = Debug;
 		};
-		6BF90D182C3FCBA30061C4D7 /* Release */ = {
+		6B5511282CD2EED1001FEC02 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -278,7 +234,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -288,14 +244,14 @@
 			};
 			name = Release;
 		};
-		6BF90D1A2C3FCBA30061C4D7 /* Debug */ = {
+		6B55112A2CD2EED1001FEC02 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"gpay/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"calculator/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -308,7 +264,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = in.shashwatt.gpay;
+				PRODUCT_BUNDLE_IDENTIFIER = in.shashwatt.calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -316,14 +272,14 @@
 			};
 			name = Debug;
 		};
-		6BF90D1B2C3FCBA30061C4D7 /* Release */ = {
+		6B55112B2CD2EED1001FEC02 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"gpay/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"calculator/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -336,7 +292,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = in.shashwatt.gpay;
+				PRODUCT_BUNDLE_IDENTIFIER = in.shashwatt.calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -347,25 +303,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6BF90D062C3FCBA30061C4D7 /* Build configuration list for PBXProject "gpay" */ = {
+		6B5511162CD2EED0001FEC02 /* Build configuration list for PBXProject "calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6BF90D172C3FCBA30061C4D7 /* Debug */,
-				6BF90D182C3FCBA30061C4D7 /* Release */,
+				6B5511272CD2EED1001FEC02 /* Debug */,
+				6B5511282CD2EED1001FEC02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6BF90D192C3FCBA30061C4D7 /* Build configuration list for PBXNativeTarget "gpay" */ = {
+		6B5511292CD2EED1001FEC02 /* Build configuration list for PBXNativeTarget "calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6BF90D1A2C3FCBA30061C4D7 /* Debug */,
-				6BF90D1B2C3FCBA30061C4D7 /* Release */,
+				6B55112A2CD2EED1001FEC02 /* Debug */,
+				6B55112B2CD2EED1001FEC02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 6BF90D032C3FCBA30061C4D7 /* Project object */;
+	rootObject = 6B5511132CD2EED0001FEC02 /* Project object */;
 }

@@ -36,6 +36,9 @@ struct login: View {
                                     
                             }
                             TextField("",text: $username)
+//                                .onChange(of: username){ newValue in
+//                                    print("username is \(newValue)")
+//                                }
                         }
                         .frame(height: 42)
                         .padding(.horizontal)

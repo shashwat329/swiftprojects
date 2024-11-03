@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,6 +30,10 @@
 		6B4C7C0E2CCEB98400E1D967 /* auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = auth.swift; sourceTree = "<group>"; };
 		6BB602AF2C4B36BD00544C57 /* OTPlogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPlogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		6B4C7C102CD0383C00E1D967 /* Components */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Components; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6B457B1D2C48CFF100899CF6 /* Frameworks */ = {
@@ -61,6 +65,7 @@
 		6B457B222C48CFF100899CF6 /* signup_login */ = {
 			isa = PBXGroup;
 			children = (
+				6B4C7C102CD0383C00E1D967 /* Components */,
 				6B4C7C0D2CCEB97100E1D967 /* Firebase */,
 				6B457B232C48CFF100899CF6 /* signup_loginApp.swift */,
 				6B457B252C48CFF100899CF6 /* ContentView.swift */,
@@ -104,6 +109,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				6B4C7C102CD0383C00E1D967 /* Components */,
 			);
 			name = signup_login;
 			productName = signup_login;

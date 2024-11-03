@@ -46,7 +46,7 @@ class OTPViewModel: ObservableObject {
 }
 struct OTPlogin: View {
     @StateObject private var viewModel = OTPViewModel()
-      @State private var phoneNumber: String = ""
+    @State private var email: String = ""
     @EnvironmentObject var settings: DarkmodeSettings
       var body: some View {
           ZStack{
@@ -57,11 +57,11 @@ struct OTPlogin: View {
               VStack(spacing: 20) {
                   if !viewModel.isOTPSent {
                       ZStack(alignment: .leading){
-                          if phoneNumber.isEmpty{
+                          if email.isEmpty{
                               Text("Enter your number")
                           }
                           
-                          TextField("", text: $viewModel.phoneNumber)
+                          TextField("", text:$email)
                              
                       }
                       .keyboardType(.phonePad)

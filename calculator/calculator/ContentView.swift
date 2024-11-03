@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  gpay
+//  calculator
 //
-//  Created by shashwat singh on 11/07/24.
+//  Created by shashwat singh on 31/10/24.
 //
 
 import SwiftUI
