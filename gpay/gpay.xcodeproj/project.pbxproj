@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B52B6342CE855CA009C7EDF /* QRscannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B52B6332CE855CA009C7EDF /* QRscannerView.swift */; };
 		6BF90D0F2C3FCBA30061C4D7 /* gpayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF90D0E2C3FCBA30061C4D7 /* gpayApp.swift */; };
 		6BF90D112C3FCBA30061C4D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF90D102C3FCBA30061C4D7 /* ContentView.swift */; };
 		6BF90D132C3FCBA30061C4D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BF90D122C3FCBA30061C4D7 /* Assets.xcassets */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B52B6332CE855CA009C7EDF /* QRscannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRscannerView.swift; sourceTree = "<group>"; };
+		6B64B97A2CE78AD600A7076B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6BF90D0B2C3FCBA30061C4D7 /* gpay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gpay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF90D0E2C3FCBA30061C4D7 /* gpayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gpayApp.swift; sourceTree = "<group>"; };
 		6BF90D102C3FCBA30061C4D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -28,6 +31,10 @@
 		6BFC27972CD71FB80055EFA8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		6BFC279B2CD79E5D0055EFA8 /* QRscanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRscanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		6B52B6352CE8AEC7009C7EDF /* Modal */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Modal; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6BF90D082C3FCBA30061C4D7 /* Frameworks */ = {
@@ -59,6 +66,8 @@
 		6BF90D0D2C3FCBA30061C4D7 /* gpay */ = {
 			isa = PBXGroup;
 			children = (
+				6B52B6352CE8AEC7009C7EDF /* Modal */,
+				6B64B97A2CE78AD600A7076B /* Info.plist */,
 				6BFC27952CD6B42C0055EFA8 /* View */,
 				6BF90D0E2C3FCBA30061C4D7 /* gpayApp.swift */,
 				6BF90D122C3FCBA30061C4D7 /* Assets.xcassets */,
@@ -83,6 +92,7 @@
 				6BF90D1E2C3FE96B0061C4D7 /* g2.swift */,
 				6BFC27972CD71FB80055EFA8 /* HomeView.swift */,
 				6BFC279B2CD79E5D0055EFA8 /* QRscanner.swift */,
+				6B52B6332CE855CA009C7EDF /* QRscannerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -101,6 +111,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				6B52B6352CE8AEC7009C7EDF /* Modal */,
 			);
 			name = gpay;
 			productName = gpay;
@@ -159,6 +172,7 @@
 			files = (
 				6BF90D1F2C3FE96B0061C4D7 /* g2.swift in Sources */,
 				6BFC279C2CD79E5D0055EFA8 /* QRscanner.swift in Sources */,
+				6B52B6342CE855CA009C7EDF /* QRscannerView.swift in Sources */,
 				6BF90D112C3FCBA30061C4D7 /* ContentView.swift in Sources */,
 				6BF90D1D2C3FCBC70061C4D7 /* g3.swift in Sources */,
 				6BFC27982CD71FB80055EFA8 /* HomeView.swift in Sources */,
@@ -296,8 +310,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"gpay/Preview Content\"";
+				DEVELOPMENT_TEAM = K2LS6S3ZTR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = gpay/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -324,8 +340,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"gpay/Preview Content\"";
+				DEVELOPMENT_TEAM = K2LS6S3ZTR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = gpay/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

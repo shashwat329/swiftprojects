@@ -12,6 +12,7 @@ struct g2: View {
     @State private var note: String = ""
     @State private var isPaySelected: Bool = true
     @State private var name: String = "kumar shashwat".uppercased()
+    var scannedString: String
     let backgroundColor = Color(red: 0.07, green: 0.07, blue: 0.07)
     let lightgray = Color(red: 0.90, green: 0.90, blue: 0.90)
     
@@ -21,13 +22,14 @@ struct g2: View {
             backgroundColor.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             //content
             VStack() {
+                Spacer()
                 // User Info
                 VStack {
                     Image(systemName: "circle.fill")
                         .resizable()
                         .frame(width: 70, height: 70)
                         .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                    Text("Paying \(name)")
+                    Text("Paying \(scannedString.capitalized)")
                         .font(.headline)
                         .foregroundColor(.white)
                     Text("Banking name: \(name)")
@@ -49,6 +51,7 @@ struct g2: View {
                         .frame(maxWidth: 63,minHeight: 60)
                         .multilineTextAlignment(.leading)
                         .font(.largeTitle)
+                        .keyboardType(.numberPad)
 //                        .border(Color.blue)
                 }
                 
@@ -57,27 +60,42 @@ struct g2: View {
                 if note.isEmpty {
                     TextField("", text: $note)
                         .foregroundColor(.white)
-                        .keyboardType(.numberPad)
                         .font(.system(size: 40))
                         .padding()
-                        .frame(width: 150, height: 50)
+                        .frame(width: 120, height: 40)
                         .background(Color.gray.opacity(0.2))
                         .cornerRadius(10)
                         .overlay(
-                            Text("Add a note")
-                                .colorInvert()
+                            Text("Add note")
                         
                         )
                 }
-              
+                // tonextView
+                Spacer()
+                HStack{
+                    Spacer()
+                    NavigationLink {g3()} label: {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color.blue)
+                            .frame(width: 70, height: 70)
+                            .padding()
+                            .overlay(
+                                Image(systemName: "arrow.right")
+                                    .font(.system(size: 20))
+                                    .foregroundColor(.black)
+                            )
+                    }
+
+                }
             }
             .padding()
 
         }
+        
     }
 }
 
 #Preview {
-    g2()
+    g2(scannedString: "hello")
 }
 

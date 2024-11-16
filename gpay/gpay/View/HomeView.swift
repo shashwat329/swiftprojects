@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var scannedString: String = ""
+    @State private var isScanning: Bool = true
+    
+    @State private var showScanner: Bool = false
+    
     var body: some View {
         ScrollView{
             ZStack{
@@ -17,7 +22,7 @@ struct HomeView: View {
                         HStack{
                             RoundedRectangle(cornerRadius: 30)
                                 .fill(.gray.opacity(0.4) )
-                                .frame(width: 300,height:60)
+                                .frame(width: 300,height:50)
                                 .overlay(){
                                     HStack{
                                         Image(systemName: "magnifyingglass")
@@ -47,20 +52,25 @@ struct HomeView: View {
                     .background(Color(.systemGray6))
                     HStack{
                         VStack{
-                            Button(action:{print("button clicked!!")}){
+                            NavigationLink(destination: QRscannerView()){
+                                
                                 Image(systemName: "qrcode")
                                     .resizable()
-                                    .frame(width: 40,height: 40)
+                                    .frame(width: 30,height: 30)
                                     .padding(.horizontal)
-                                }
-                            Text("scan any QR code")
+                            }
+                            Text("scan any")
                                 .foregroundStyle(.white)
+                                .font(.caption)
+                            Text("Qr code")
+                                .foregroundStyle(.white)
+                                .font(.caption)
                         }
-                       
+                    
                         VStack(alignment: .center){
                             Image(systemName: "rectangle")
                                 .resizable()
-                                .frame(width: 30, height:40)
+                                .frame(width: 20, height:30)
                                 .padding(.horizontal)
                                 .padding(.horizontal)
                                 .overlay{
@@ -68,19 +78,23 @@ struct HomeView: View {
                                 }
                             Text("Pay")
                                 .foregroundStyle(.white)
+                                .font(.caption)
                             Text("contacts")
                                 .foregroundStyle(.white)
+                                .font(.caption)
                         }
                         VStack{
                             Image(systemName: "iphone")
                                 .resizable()
-                                .frame(width: 30,height: 40)
+                                .frame(width: 20,height: 30)
                                 .padding(.horizontal)
                                 .padding(.horizontal)
                             Text("Pay phone")
                                 .foregroundStyle(.white)
+                                .font(.caption)
                             Text("number")
                                 .foregroundStyle(.white)
+                                .font(.caption)
                             
                         }
                         VStack{
@@ -90,55 +104,68 @@ struct HomeView: View {
                                 .padding(.horizontal)
                             Text("Bank")
                                 .foregroundStyle(.white)
+                                .font(.caption)
                             Text("transfer")
                                 .foregroundStyle(.white)
-                            }
+                                .font(.caption)
                         }
+                    }
                     .foregroundStyle(.blue)
+                    .padding(.bottom)
                     HStack{
                         VStack{
                             Image(systemName: "at")
                                 .resizable()
-                                .frame(width: 40,height: 40)
+                                .frame(width: 30,height: 30)
                                 .padding(.horizontal)
-                            Text("pay UPI ID or number")
+                            Text("Pay UPI ID")
                                 .foregroundStyle(.white)
+                                .font(.caption)
+                            Text("or number")
+                                .foregroundStyle(.white)
+                                .font(.caption)
                         }
                         VStack{
                             Image(systemName: "person")
                                 .resizable()
-                                .frame(width: 40,height: 40)
+                                .frame(width: 30,height: 30)
                                 .padding(.horizontal)
                                 .padding(.horizontal)
                             Text("Self")
                                 .foregroundStyle(.white)
+                                .font(.caption)
                             Text("transfer")
                                 .foregroundStyle(.white)
+                                .font(.caption)
                         }
                         VStack{
                             Image(systemName: "list.bullet.rectangle.portrait")
                                 .resizable()
-                                .frame(width: 30,height: 40)
+                                .frame(width: 20,height: 30)
                                 .padding(.horizontal)
                             Text("pay")
                                 .foregroundStyle(.white)
+                                .font(.caption)
                             Text("contact")
                                 .foregroundStyle(.white)
+                                .font(.caption)
                         }
                         
                         VStack{
                             Image(systemName: "iphone")
                                 .resizable()
-                                .frame(width: 30, height: 40)
+                                .frame(width: 20, height: 30)
                                 .padding(.horizontal)
                                 .padding(.horizontal)
                                 .overlay{
-                                Image(systemName: "bolt")
-                            }
+                                    Image(systemName: "bolt")
+                                }
                             Text("Mobile")
                                 .foregroundStyle(.white)
+                                .font(.caption)
                             Text("recharge")
                                 .foregroundStyle(.white)
+                                .font(.caption)
                         }
                     }.foregroundStyle(.blue)
                     //people section
@@ -146,111 +173,113 @@ struct HomeView: View {
                         HStack{
                             Text("people".capitalized)
                                 .foregroundStyle(.white)
-                                .font(.largeTitle)
+                                .font(.title)
                                 .padding()
                             Spacer()
-                                .padding()
-                                .padding()
                         }
                         HStack(spacing: 20)
                         {
                             VStack{
                                 Circle().fill(.green)
-                                    .frame(width: 70,height: 70)
+                                    .frame(width: 60,height: 60)
                                     .overlay{
                                         Text("K")
-                                            .font(.system(size: 45))
+                                            .font(.system(size: 35))
                                             .foregroundStyle(.white)
                                     }
                                 Text("kunal")
-                                    .font(.title3)
+                                    .font(.callout)
                                     .bold()
                             }
                             VStack{
                                 Circle().fill(.yellow)
-                                    .frame(width: 70,height: 70)
+                                    .frame(width: 60,height: 60)
                                     .overlay{
                                         Text("S")
-                                            .font(.system(size: 45))
+                                            .font(.system(size: 35))
                                             .foregroundStyle(.white)
                                     }
                                 Text("Santosh")
-                                    .font(.title3)
+                                    .font(.callout)
                                     .bold()
                             }
                             VStack{
                                 Circle().fill(.orange)
-                                    .frame(width: 70,height: 70)
+                                    .frame(width: 60,height: 60)
                                     .overlay{
                                         Text("A")
-                                            .font(.system(size: 45))
+                                            .font(.system(size: 35))
                                             .foregroundStyle(.white)
                                     }
                                 Text("Aditya")
-                                    .font(.title3)
+                                    .font(.callout)
                                     .bold()
                             }
                             VStack{
                                 Circle().fill(.brown)
-                                    .frame(width: 70,height: 70)
+                                    .frame(width: 60,height: 60)
                                     .overlay{
-                                        Text("P")
-                                            .font(.system(size: 45))
+                                        Text("A")
+                                            .font(.system(size: 35))
                                             .foregroundStyle(.white)
                                     }
-                                Text("Piyush")
-                                    .font(.title3)
+                                Text("Aditya")
+                                    .font(.callout)
                                     .bold()
+                                
                             }
-                       }
+                        }
                         .padding(.vertical)
                         HStack(spacing: 20){
                             VStack{
-                                Circle().fill(.blue)
-                                    .frame(width: 70,height: 70)
+                                Circle().fill(.orange)
+                                    .frame(width: 60,height: 60)
                                     .overlay{
-                                        Text("K")
-                                            .font(.system(size: 45))
+                                        Text("A")
+                                            .font(.system(size: 35))
                                             .foregroundStyle(.white)
                                     }
-                                Text("kumar")
-                                    .font(.title3)
+                                Text("Aditya")
+                                    .font(.callout)
                                     .bold()
-                            }
-                            VStack{
-                                Circle().fill(.yellow)
-                                    .frame(width: 70,height: 70)
-                                    .overlay{
-                                        Text("S")
-                                            .font(.system(size: 45))
-                                            .foregroundStyle(.white)
-                                    }
-                                Text("shashwat")
-                                    .font(.title3)
-                                    .bold()
+                                
                             }
                             VStack{
                                 Circle().fill(.orange)
-                                    .frame(width: 70,height: 70)
+                                    .frame(width: 60,height: 60)
                                     .overlay{
                                         Text("A")
-                                            .font(.system(size: 45))
+                                            .font(.system(size: 35))
                                             .foregroundStyle(.white)
                                     }
-                                Text("Ayush")
-                                    .font(.title3)
+                                Text("Aditya")
+                                    .font(.callout)
                                     .bold()
+                                
+                            }
+                            VStack{
+                                Circle().fill(.orange)
+                                    .frame(width: 60,height: 60)
+                                    .overlay{
+                                        Text("A")
+                                            .font(.system(size: 35))
+                                            .foregroundStyle(.white)
+                                    }
+                                Text("Aditya")
+                                    .font(.callout)
+                                    .bold()
+                                
                             }
                             VStack{
                                 Circle().stroke( )
-                                    .frame(width: 70,height: 70)
+                                    .frame(width: 60,height: 60)
                                     .overlay{
                                         Image(systemName: "chevron.down")
-                                            .font(.system(size: 45))
+                                            .font(.system(size: 35))
                                             .foregroundStyle(.blue)
                                     }
                                 Text("more".capitalized)
-                                    .font(.title3)
+                                    .font(.callout)
                                     .bold()
                             }
                         }
@@ -288,17 +317,19 @@ struct HomeView: View {
                     }
                     Image("baseimg")
                         .resizable()
-                        .scaledToFit()
-                        .frame(maxWidth: .infinity, maxHeight: 420)
+                        .frame(maxWidth: .infinity, maxHeight: 300)
                         .clipped()
                     
                 }
             }
+            .scrollIndicators(.hidden)
+           
         }
-        .scrollIndicators(.hidden)
+    
+        
     }
+   
 }
-
 #Preview {
-    HomeView()
+    ContentView()
 }
