@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct g3: View {
+    var name: String
+    var upiID: String
+    var amount: String
     var body: some View {
         let backgroundColor = Color(red: 0.07, green: 0.07, blue: 0.07)
         let lightgray = Color(red: 0.80, green: 0.80, blue: 0.80)
-       @State var name: String = "kumar shashwat"
-       @State var upiid: String = "xyxajhaskc@ybl"
         ZStack{
             //background
             backgroundColor.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
@@ -34,7 +35,7 @@ struct g3: View {
                     Image(systemName: "indianrupeesign")
                         .foregroundColor(.white)
                         .font(.title3)
-                    Text("100.00")
+                    Text("\(amount)")
                         .foregroundColor(.white)
                         .font(.title)
                 }
@@ -42,7 +43,7 @@ struct g3: View {
                 Text("Paid to \(name)")
                     .foregroundColor(.white)
                     .font(.title2)
-                Text("UPI ID: \(upiid)")
+                Text("UPI ID: \(upiID)")
                     .foregroundColor(lightgray)
                     .font(.title3)
                 Spacer()
@@ -101,5 +102,6 @@ struct g3: View {
 }
 
 #Preview {
-    g3()
+    g3(name: "Kumar Shashwat", upiID: "shashwatrajwanshi41@okhdfcbank", amount: "1000")
+
 }
